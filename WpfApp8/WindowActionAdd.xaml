@@ -1,0 +1,38 @@
+﻿<Window x:Class="ProjektPlant.WindowActionAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektPlant"
+        mc:Ignorable="d"
+        Title="Dodaj Opieke" Height="200" Width="350" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Nazwa rośliny" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding nameOfPlant}" Grid.ColumnSpan="2" Margin="10,10"/>
+
+        <TextBlock Text="Opieka" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding action}" Grid.ColumnSpan="2" Margin="10,10"/>
+
+        <TextBlock Text="Opis" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
+        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding description}" Grid.ColumnSpan="2" Margin="10,10"/>
+
+        <Button Content="Ok" Grid.Column="2" Grid.Row="3" Click="ButtonOk_Click" Margin="10,10,10,10"/>
+        <Button Content="Cancel" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Click="ButtonCancel_Click" Margin="10,10,10,10"/>
+    </Grid>
+</Window>

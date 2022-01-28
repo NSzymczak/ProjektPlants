@@ -1,0 +1,39 @@
+﻿<Window x:Class="ProjektPlant.WindowPlantTab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektPlant"
+        mc:Ignorable="d"
+        Title="Tabela roślin" Height="600" Width="900" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid Name="dataGridPlants" AutoGenerateColumns="False" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="15">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nazwa rośliny" Binding="{Binding nameOfPlant}" Width="1*" FontSize="10" />
+                <DataGridTextColumn Header="Łacińska nazwa rośliny" Binding="{Binding nameOfPlantLatin}" Width="1*" FontSize="10"/>
+                <DataGridTextColumn Header="Pochodzenie" Binding="{Binding origin}" Width="2*" FontSize="10"/>
+                <DataGridTemplateColumn Header="Zdjęcie" Width="2*" IsReadOnly="True" CanUserResize="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Image}" Height="125" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Column="0" Grid.Row="1" Content="Dodaj rośline" Click="ButtonAdd_Click" Width="100" Height="40"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Właściwości" Click="ButtonInfo_Click" Width="100" Height="40"/>
+        <Button Grid.Column="2" Grid.Row="1" Content="Usuń" Click="ButtonDelete_Click" Width="100" Height="40"/>
+    </Grid>
+</Window>

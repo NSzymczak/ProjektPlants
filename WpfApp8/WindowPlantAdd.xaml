@@ -1,0 +1,71 @@
+﻿<Window x:Class="ProjektPlant.WindowPlantAdd"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektPlant"
+        mc:Ignorable="d"
+        Title="Dodaj roślinę" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Nazwa" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding nameOfPlant}" Grid.ColumnSpan="2"/>
+
+        <TextBlock Text="Nazwa łac." Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding nameOfPlantLatin}" Grid.ColumnSpan="2"/>
+
+        <TextBlock Text="Pochodzenie" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
+        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding origin}" Grid.ColumnSpan="2"/>
+
+        <TextBlock Grid.Row="3" Text="Dodaj zdjęcie" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Name="FileName" Text="{Binding fileName}" Grid.ColumnSpan="2" Margin="0,58,0,58" Grid.RowSpan="3"/>
+        <Button Grid.Column="3" Grid.Row="3" Margin="10,10,10,10" Content="Dodaj zdjęcie" Background="White" Click="ButonAddPicture_Click"/>
+
+        <TextBlock Text="Podlewanie" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="co" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="2" Grid.Row="4" Text="{Binding water}" />
+        <TextBlock Grid.Row="4" Grid.Column="3" Text="podlewanie" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBlock Text="Nasłonecznienie" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
+        <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding light}" Grid.ColumnSpan="2"/>
+
+        <TextBlock Text="Nawóz wiosna/lato" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBlock Grid.Row="6" Grid.Column="1" Text="co" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="2" Grid.Row="6" Text="{Binding fertilizationSpringSummer}"/>
+        <TextBlock Grid.Row="6" Grid.Column="3" Text="podlewanie" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBlock Text="Nawoz jesien/zima" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBlock Grid.Row="7" Grid.Column="1" Text="co" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="2" Grid.Row="7" Text="{Binding fertilizationAutumnWinter}"/>
+        <TextBlock Grid.Row="7" Grid.Column="3" Text="podlewanie" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBlock Text="Rodzaj podłoża" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+        <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding subsoil}"  Grid.ColumnSpan="2"/>
+
+        <Button Content="Ok" Grid.Column="0" Grid.Row="9" Click="ButtonOk_Click" Margin="10,10,10,10"/>
+        <Button Content="Cancel" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Click="ButtonCancel_Click" Margin="10,10,10,10"/>
+        <Image Grid.Column="3" Grid.Row="2" Grid.RowSpan="3" Name="ImageBox" Source="{Binding Image, Mode=TwoWay}"/>
+
+    </Grid>
+</Window>
