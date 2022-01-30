@@ -16,7 +16,6 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -28,8 +27,7 @@
         <Button Grid.Column="1" Grid.Row="2" Content="Tabela rośliny" Click="ButtonTabPlant_Click" Width="200" Height="40"/>
         <Button Grid.Column="1" Grid.Row="3" Content="Tabela opieka" Click="ButtonTabAction_Click" Width="200" Height="40"/>
         <Button Grid.Column="1" Grid.Row="4" Content="Raporty" Click="ButtonReports_Click" Width="200" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="5" Content="Widoki" Click="ButtonView_Click" Width="200" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="6" Content="Przeszukiwanie" Click="ButtonSearch_Click" Width="200" Height="40"/>
+        <Button Grid.Column="1" Grid.Row="5" Content="Widok" Click="ButtonView_Click" Width="200" Height="40"/>
         <Image Grid.ColumnSpan="3" HorizontalAlignment="Left"  Grid.RowSpan="6" />
     </Grid>
 </Window>

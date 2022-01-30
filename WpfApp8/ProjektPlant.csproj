@@ -95,6 +95,9 @@
     <Compile Include="WindowReports.xaml.cs">
       <DependentUpon>WindowReports.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowSearch.xaml.cs">
+      <DependentUpon>WindowSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowView.xaml.cs">
       <DependentUpon>WindowView.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
