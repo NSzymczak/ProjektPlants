@@ -13,6 +13,9 @@ namespace ProjektPlant
         private SqlConnection cnn;
         public ObservableCollection<ClassPlant> collectionofplants = new ObservableCollection<ClassPlant>();
         public ObservableCollection<ClassAction> collectionofaction = new ObservableCollection<ClassAction>();
+        public ObservableCollection<ClassView> collectionofview= new ObservableCollection<ClassView>();
+
+
         public void OpenConection()
         {
             string connetionString;
@@ -167,6 +170,25 @@ namespace ProjektPlant
             da.Fill(dt);
         }
 
-
+        public void GetDateView()
+        {
+            SqlCommand command = new SqlCommand("getPlantView", cnn);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow row in dt.Rows)
+            {
+                ClassView view = new ClassView();
+                id_action = view.ID;
+                view.nameOfPlant = (string)row["nameOfPlant"];
+                view.light = (string)row["light"];
+                view.water = Convert.ToInt32(row["water"]);
+                view.subsoil = (string)row["subsoil"];
+                view.action = (string)row["action"];
+                view.description = (string)row["description"];
+                collectionofview.Add(view);
+            }
+        }
     }
 }

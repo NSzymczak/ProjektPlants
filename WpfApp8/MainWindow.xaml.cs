@@ -29,5 +29,16 @@ namespace ProjektPlant
             WindowReports report = new WindowReports();
             report.ShowDialog();
         }
+
+        private void ButtonView_Click(object sender, RoutedEventArgs e)
+        {
+            WindowView view = new WindowView();
+            view.ShowDialog();
+        }
+
+        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

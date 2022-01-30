@@ -78,6 +78,7 @@
     <Compile Include="ClassAction.cs" />
     <Compile Include="ClassDatabase.cs" />
     <Compile Include="ClassPlant.cs" />
+    <Compile Include="ClassView.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="WindowActionAdd.xaml.cs">
       <DependentUpon>WindowActionAdd.xaml</DependentUpon>
@@ -93,6 +94,9 @@
     </Compile>
     <Compile Include="WindowReports.xaml.cs">
       <DependentUpon>WindowReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowView.xaml.cs">
+      <DependentUpon>WindowView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -123,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

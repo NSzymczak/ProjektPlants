@@ -1,0 +1,22 @@
+﻿<Window x:Class="ProjektPlant.WindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="WindowView" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="dataGridCare" AutoGenerateColumns="False" Grid.ColumnSpan="4" Grid.Row="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nazwa" Binding="{Binding nameOfPlant}" Width="0.5*" FontSize="15"/>
+                <DataGridTextColumn Header="Podlewanie (ilość na tydz.)" Binding="{Binding water}" Width="0.5*" FontSize="15"/>
+                <DataGridTextColumn Header="Nasłonecznienie" Binding="{Binding light}" Width="1*" FontSize="15"/>
+                <DataGridTextColumn Header="Podłoże" Binding="{Binding subsoil}" Width="1*" FontSize="15"/>
+                <DataGridTextColumn Header="Operacja" Binding="{Binding action}" Width="1*" FontSize="15"/>
+                <DataGridTextColumn Header="Opis" Binding="{Binding description}" Width="2*" FontSize="15"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

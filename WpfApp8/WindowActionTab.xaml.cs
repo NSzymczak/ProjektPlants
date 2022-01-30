@@ -12,7 +12,7 @@ namespace ProjektPlant
         {
             InitializeComponent();
             baza.OpenConection();
-            baza.GetDateAction();
+            baza.GetDateView();
             dataGridCare.ItemsSource = baza.collectionofaction;
         }
 
