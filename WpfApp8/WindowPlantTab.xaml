@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektPlant"
         mc:Ignorable="d"
-        Title="Tabela roślin" Height="600" Width="900" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+        Title="Tabela roślin" Height="800" Width="1300" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Icon="9bec470b2ca2b00cca43aede599740c8.jpg">
+    <Window.Background>
+        <ImageBrush ImageSource="Bez tytułu.png"/>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"/>
@@ -18,12 +21,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid Name="dataGridPlants" AutoGenerateColumns="False" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="15">
+        <DataGrid Name="dataGridPlants"  AutoGenerateColumns="False" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="24" Background="{x:Null}" FontFamily="Monotype Corsiva">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nazwa rośliny" Binding="{Binding nameOfPlant}" Width="1*" FontSize="10" />
-                <DataGridTextColumn Header="Łacińska nazwa rośliny" Binding="{Binding nameOfPlantLatin}" Width="1*" FontSize="10"/>
-                <DataGridTextColumn Header="Pochodzenie" Binding="{Binding origin}" Width="2*" FontSize="10"/>
-                <DataGridTemplateColumn Header="Zdjęcie" Width="2*" IsReadOnly="True" CanUserResize="True">
+                <DataGridTextColumn Header="Nazwa rośliny" Binding="{Binding nameOfPlant}" Width="1*" FontSize="24"  />
+                <DataGridTextColumn Header="Łacińska nazwa rośliny" Binding="{Binding nameOfPlantLatin}" Width="1*" FontSize="24" />
+                <DataGridTextColumn Header="Pochodzenie" Binding="{Binding origin}" Width="2*" FontSize="24" />
+                <DataGridTemplateColumn Header="Zdjęcie" Width="2*" IsReadOnly="True" CanUserResize="True" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Image Source="{Binding Image}" Height="125" />
@@ -32,8 +35,8 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Column="0" Grid.Row="1" Content="Dodaj rośline" Click="ButtonAdd_Click" Width="100" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="1" Content="Właściwości" Click="ButtonInfo_Click" Width="100" Height="40"/>
-        <Button Grid.Column="2" Grid.Row="1" Content="Usuń" Click="ButtonDelete_Click" Width="100" Height="40"/>
+        <Button Grid.Column="0" Grid.Row="1" Content="Dodaj rośline" Click="ButtonAdd_Click" Width="300" Height="60" Background="White" BorderBrush="Black" FontFamily="Monotype Corsiva" FontSize="36"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Właściwości" Click="ButtonInfo_Click" Width="300" Height="60" BorderBrush="Black" Background="White" FontFamily="Monotype Corsiva" FontSize="36"/>
+        <Button Grid.Column="2" Grid.Row="1" Content="Usuń" Click="ButtonDelete_Click" Width="300" Height="60" BorderBrush="Black" Background="White" FontFamily="Monotype Corsiva" FontSize="36"/>
     </Grid>
 </Window>

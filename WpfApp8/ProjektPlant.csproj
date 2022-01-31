@@ -172,6 +172,10 @@
   <ItemGroup>
     <Resource Include="rosliny-tlo-z-pustej-przestrzeni_79603-1078.jpg" />
     <Resource Include="pngtree-natural-plant-background-image_556832.jpg" />
+    <Resource Include="ikona.jpg" />
+    <Resource Include="9bec470b2ca2b00cca43aede599740c8.jpg" />
+    <Resource Include="rosliny-doniczkowe-na-wieszakach-makramy-ikona_25030-44263.jpg" />
+    <Resource Include="Bez tytułu.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

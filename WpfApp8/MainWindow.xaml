@@ -6,8 +6,12 @@
         
         xmlns:local="clr-namespace:ProjektPlant"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="500" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="450" Width="500" WindowStartupLocation="CenterScreen" Icon="9bec470b2ca2b00cca43aede599740c8.jpg">
+
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="rosliny-doniczkowe-na-wieszakach-makramy-ikona_25030-44263.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -20,14 +24,15 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label  Grid.Column="1" Grid.Row="1" Content="Baza roślin" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" />
-        <Button Grid.Column="1" Grid.Row="2" Content="Tabela rośliny" Click="ButtonTabPlant_Click" Width="200" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="3" Content="Tabela opieka" Click="ButtonTabAction_Click" Width="200" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Raporty" Click="ButtonReports_Click" Width="200" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="5" Content="Widok" Click="ButtonView_Click" Width="200" Height="40"/>
+        <Label Content="Baza roślin" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" FontFamily="Monotype Corsiva" Grid.ColumnSpan="3" />
+        <Button Grid.Column="1" Grid.Row="2" Content="Tabela rośliny" Click="ButtonTabPlant_Click" Width="200" Height="40" BorderBrush="Black" FontFamily="Monotype Corsiva" FontSize="24" Background="White"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="Tabela opieka" Click="ButtonTabAction_Click" Width="200" Height="40" BorderBrush="Black" FontFamily="Monotype Corsiva" FontSize="24" Background="White"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Raporty" Click="ButtonReports_Click" Width="200" Height="40" BorderBrush="Black" FontFamily="Monotype Corsiva" FontSize="24" Background="White"/>
+        <Button Grid.Column="1" Grid.Row="5" Content="Widok" Click="ButtonView_Click" Width="200" Height="40" BorderBrush="Black" FontFamily="Monotype Corsiva" FontSize="24" Background="White">
+        </Button>
         <Image Grid.ColumnSpan="3" HorizontalAlignment="Left"  Grid.RowSpan="6" />
     </Grid>
 </Window>

@@ -10,7 +10,7 @@
         
         xmlns:local="clr-namespace:ProjektPlant"
         mc:Ignorable="d"
-        Title="Raport" Height="450" Width="800" Topmost="True" WindowStartupLocation="CenterScreen">
+        Title="Raport" Height="450" Width="800" Topmost="True" WindowStartupLocation="CenterScreen" Icon="9bec470b2ca2b00cca43aede599740c8.jpg">
     <Grid>
 
         <wfi:WindowsFormsHost VerticalAlignment="Stretch"  Name="winFormsHost" >

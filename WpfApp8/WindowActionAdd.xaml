@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektPlant"
         mc:Ignorable="d"
-        Title="Dodaj Opieke" Height="200" Width="350" WindowStartupLocation="CenterScreen">
+        Title="Dodaj Opieke" Height="200" Width="350" WindowStartupLocation="CenterScreen" Icon="9bec470b2ca2b00cca43aede599740c8.jpg">
+    <Window.Background>
+        <ImageBrush ImageSource="Bez tytułu.png"/>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -32,7 +35,7 @@
         <TextBlock Text="Opis" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
         <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding description}" Grid.ColumnSpan="2" Margin="10,10"/>
 
-        <Button Content="Ok" Grid.Column="2" Grid.Row="3" Click="ButtonOk_Click" Margin="10,10,10,10"/>
-        <Button Content="Cancel" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Click="ButtonCancel_Click" Margin="10,10,10,10"/>
+        <Button Content="Ok" Grid.Column="2" Grid.Row="3" Click="ButtonOk_Click" Margin="40,10,33,10.4" Background="White" BorderBrush="Black" FontFamily="Monotype Corsiva" FontSize="16"/>
+        <Button Content="Cancel" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Click="ButtonCancel_Click" Margin="32,10,37,10.4" BorderBrush="Black" Background="White" FontFamily="Monotype Corsiva" FontSize="16"/>
     </Grid>
 </Window>

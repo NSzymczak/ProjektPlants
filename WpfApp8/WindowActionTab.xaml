@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektPlant"
         mc:Ignorable="d"
-        Title="Opieka" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Opieka" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="9bec470b2ca2b00cca43aede599740c8.jpg">
+    <Window.Background>
+        <ImageBrush ImageSource="Bez tytułu.png"/>
+    </Window.Background>
     <Grid>
 
         <Grid.RowDefinitions>
@@ -19,7 +22,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid Name="dataGridCare" AutoGenerateColumns="False" Grid.ColumnSpan="4" Grid.Row="0">
+        <DataGrid Name="dataGridCare" AutoGenerateColumns="False" Grid.ColumnSpan="4" Grid.Row="0" Background="{x:Null}" FontFamily="Monotype Corsiva" FontSize="18">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nazwa" Binding="{Binding nameOfPlant}" Width="0.5*" FontSize="15"/>
                 <DataGridTextColumn Header="Operacja" Binding="{Binding action}" Width="2*" FontSize="15"/>
@@ -27,8 +30,8 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Grid.Column="0" Grid.Row="1" Content="Dodaj opieke" Click="ButtonAdd_Click" Width="100" Height="40"/>
-        <Button Grid.Column="1" Grid.Row="1" Content="Edytuj opieke" Click="ButtonInfo_Click" Width="100" Height="40"/>
-        <Button Grid.Column="2" Grid.Row="1" Content="Usuń" Click="ButtonDelete_Click" Width="100" Height="40"/>
+        <Button Grid.Column="0" Grid.Row="1" Content="Dodaj opieke" Click="ButtonAdd_Click" Width="100" Height="40" Background="#FFFFFBFB" BorderBrush="Black" FontFamily="Monotype Corsiva" FontSize="18"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Edytuj opieke" Click="ButtonInfo_Click" Width="100" Height="40" BorderBrush="Black" Background="White" FontFamily="Monotype Corsiva" FontSize="18"/>
+        <Button Grid.Column="2" Grid.Row="1" Content="Usuń" Click="ButtonDelete_Click" Width="100" Height="40" Background="White" BorderBrush="Black" FontFamily="Monotype Corsiva" FontSize="20"/>
     </Grid>
 </Window>

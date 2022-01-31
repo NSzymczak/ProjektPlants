@@ -137,16 +137,23 @@ namespace ProjektPlant
         }
         public void AddDateAction(ClassAction care)
         {
-            id_action++;
-            SqlCommand command = new SqlCommand("AddAction", cnn);
-            command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = id_action;
-            command.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = care.nameOfPlant;
-            command.Parameters.AddWithValue("@Action", SqlDbType.NVarChar).Value = care.action;
-            command.Parameters.AddWithValue("@Description", SqlDbType.NVarChar).Value = care.description;
-            SqlDataAdapter da = new SqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                id_action++;
+                SqlCommand command = new SqlCommand("AddAction", cnn);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@Id", SqlDbType.Int).Value = id_action;
+                command.Parameters.AddWithValue("@Name", SqlDbType.NVarChar).Value = care.nameOfPlant;
+                command.Parameters.AddWithValue("@Action", SqlDbType.NVarChar).Value = care.action;
+                command.Parameters.AddWithValue("@Description", SqlDbType.NVarChar).Value = care.description;
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch
+            {
+
+            }
         }
         public void DeleteDateAction(int id_delete)
         {
