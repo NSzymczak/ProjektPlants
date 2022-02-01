@@ -10,6 +10,8 @@ namespace ProjektPlant
         public MainWindow()
         {
             InitializeComponent();
+            WindowLogin log = new WindowLogin();
+            log.ShowDialog();
         }
 
         private void ButtonTabPlant_Click(object sender, RoutedEventArgs e)

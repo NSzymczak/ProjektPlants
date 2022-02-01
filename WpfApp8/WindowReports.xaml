@@ -14,7 +14,7 @@
     <Grid>
 
         <wfi:WindowsFormsHost VerticalAlignment="Stretch"  Name="winFormsHost" >
-            <wfr:ReportViewer x:Name="rptViewer" ProcessingMode="Remote" Visible="True"   />
+            <wfr:ReportViewer x:Name="rptViewer" ProcessingMode="Remote" Visible="True"/>
         </wfi:WindowsFormsHost>
     </Grid>
 </Window>

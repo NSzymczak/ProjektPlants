@@ -86,6 +86,9 @@
     <Compile Include="WindowActionTab.xaml.cs">
       <DependentUpon>WindowActionTab.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowLogin.xaml.cs">
+      <DependentUpon>WindowLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowPlantAdd.xaml.cs">
       <DependentUpon>WindowPlantAdd.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowActionTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -176,6 +183,7 @@
     <Resource Include="9bec470b2ca2b00cca43aede599740c8.jpg" />
     <Resource Include="rosliny-doniczkowe-na-wieszakach-makramy-ikona_25030-44263.jpg" />
     <Resource Include="Bez tytułu.png" />
+    <Resource Include="Bez tytułu 1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
